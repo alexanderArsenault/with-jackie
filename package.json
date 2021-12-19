@@ -1,0 +1,56 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple front-end boilerplate using Gulp 4",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodercoder/frontend-boilerplate.git"
+  },
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "@thecodercoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecodercoder/frontend-boilerplate/issues"
+  },
+  "homepage": "https://github.com/thecodercoder/frontend-boilerplate#readme",
+  "devDependencies": {
+    "@markusantonwolf/tailwind-css-plugin-multi-columns": "^1.0.4",
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.19.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-dist-clean": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.3.5",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-import": "^14.0.1",
+    "tailwindcss": "^2.2.4",
+    "tailwindcss-debug-screens": "^2.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0",
+    "jquery": "^3.5.1",
+    "lazysizes": "^5.3.2",
+    "postcss-sass": "^0.4.4",
+    "tailwindcss-pixel-dimensions": "^1.0.2",
+    "vue": "^2.6.14"
+  }
+}

@@ -1,0 +1,23 @@
+Please review the typography again based on the figma design
+
+Titles «sweet skin» and «termin buchen», as well as «next generation dermatology» have too much spacing between the letters and between each line. Please use the figma draft as template.
+the text font seems to be ‘thicker’ then on the design - not sure where that comes from. I’ll double check the font i sent you
+Line height on text font is too big
+Small Titles all have too much spacing between the letters. Text sizes also, but a little less since the font seems thicker
+The two buttons should be left aligned
+Text in all the buttons don’t seem optically centered. E.g. the two main buttons seem to need a few pixels up, while in the pop-up the 
+Address has too much line height as well
+In the buttons, you are missing the small text font for the small titles - see again figma as template
+optional/for later: does it look stupid to have the small title font a size so that all titles display on one line?
+
+Please review the spacing again based on the figma design
+- space between the top of the page and the sweet skin title (also on mobile, sorry that was my bad in the design)
++ space between intro image and intro text
+- space between the hover texts and the following image (desktop)
+- space between all the buttons (very little space between the buttons in the pop-up), also only desktop
+- space between the claim at the button and the address (this looks good on mobile though)
++ space between intro text and small titles, or less space between small titles and the accompanying text
+Adjust the grey tone to be the same as in the figma file
+Love the detail that we can click the pop-up away by clicking anywhere else
+The buttons are missing the black hover. That is for the two main buttons as in the design, as well as the «senden», «info@sweet.skin» and «+41 41 511 70 11» buttons.
+I will go through the site on a bigger screen asap, as I’m on my laptop

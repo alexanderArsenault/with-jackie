@@ -1,0 +1,44 @@
+{# v2 #}
+{# http://craftsnippets.com/articles/universal-language-switcher-for-craft-cms #}
+
+{# logic #}
+{% set currentElement = craft.app.urlManager.matchedElement %}
+{% set sites = craft.app.getSites().getGroupById(currentSite.groupId).getSites() %}
+{% set switcherLinks = [] %}
+
+{% for site in sites if site.baseUrl is not empty %}
+    
+    {% set title = craft.app.i18n.getLocaleById(site.language).nativeName %}
+    {% set url = site.getBaseUrl() %}
+    {% if currentElement %}
+        {% set otherLocaleElement = craft.app.getElements().getElementById(currentElement.id, currentElement.className(), site.id) %}
+        {% if otherLocaleElement and otherLocaleElement.enabledForSite %}
+            {% set url = otherLocaleElement.url %}
+        {% endif %}
+    {% endif %}
+
+    {% set switcherLinks = switcherLinks|merge([{
+        url: site.getBaseUrl, 
+        title: title, 
+        countryCode: site.language|split('-')|last,
+        current: site.id == currentSite.id ? true : false,
+        language: site.language,
+    }]) %}
+
+{% endfor %}
+
+{# outputting html #}
+{% if switcherLinks|length > 1 %}
+<nav aria-label="{{'Switch language'|t}}" aria-role="navigation">
+<ul class="text-lightgrey">
+{% for switcherLink in switcherLinks %}
+    <li class="inline {{switcherLink.current ? 'text-black'}}">
+        <a href="{{switcherLink.url}}" hreflang="{{switcherLink.language}}" lang="{{switcherLink.language}}">
+        	<span class="uppercase">{{ switcherLink.language }}</span> 
+        </a>
+    </li>
+		{% if loop.first %}/{% endif %}
+{% endfor %}
+</ul>
+</nav>
+{% endif %}

@@ -1,0 +1,9 @@
+baseUrl: '@web/'
+enabled: true
+handle: default
+hasUrls: true
+language: de
+name: 'Sweet Skin - DE'
+primary: true
+siteGroup: 70c4632f-a33d-4760-8dcc-522db883edc3 # Craft 3
+sortOrder: 1

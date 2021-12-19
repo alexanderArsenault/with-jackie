@@ -1,0 +1,70 @@
+{% macro lazyImage(image) %}
+    <img
+        src="{{ image.getUrl('w60') }}"
+        data-src="{{ image.getUrl('w600') }}"
+        data-srcset="{{ image.getUrl('w150') }} 150w,
+        {{ image.getUrl('w300') }} 300w,
+        {{ image.getUrl('w600') }} 600w,
+        {{ image.getUrl('w900') }} 900w,
+        {{ image.getUrl('w1800') }} 1800w"
+        class="lazyload lazyloading" alt="{{ image.title }}" />
+{% endmacro %}
+
+{% macro lazyImageHero(image) %}
+    <img
+        src="{{ image.getUrl('w60') }}"
+        data-src="{{ image.getUrl('w600') }}"
+        data-srcset="{{ image.getUrl('w150') }} 150w,
+        {{ image.getUrl('w300') }} 300w,
+        {{ image.getUrl('w600') }} 600w,
+        {{ image.getUrl('w900') }} 900w,
+        {{ image.getUrl('w1800') }} 1800w"
+        style="max-height: 900px"
+        class="object-cover h-full lazyload lazyloading" alt="{{ image.title }}" />
+{% endmacro %}
+
+{% macro lazyImageSquare(image, rounded) %}
+    <img
+        src="{{ image.getUrl('x60') }}"
+        data-src="{{ image.getUrl('x600') }}"
+        data-srcset="{{ image.getUrl('x150') }} 150w,
+        {{ image.getUrl('x300') }} 300w,
+        {{ image.getUrl('x600') }} 600w,
+        {{ image.getUrl('x900') }} 900w"
+        class="lazyload lazyloading {{rounded ? 'rounded-full' : ''}}" alt="{{ image.title }}" />
+{% endmacro %}
+
+{% macro lazyImageLandscape(image) %}
+    <img
+        src="{{ image.getUrl('landscape60x30') }}"
+        data-src="{{ image.getUrl('landscape600x300') }}"
+        data-srcset="{{ image.getUrl('landscape150x75') }} 150w,
+        {{ image.getUrl('landscape300x150') }} 300w,
+        {{ image.getUrl('landscape600x300') }} 600w,
+        {{ image.getUrl('landscape900x450') }} 900w"
+        class="lazyload lazyloading" alt="{{ image.title }}" />
+{% endmacro %}
+
+{% macro lazyImagePortrait(image) %}
+    <img
+        src="{{ image.getUrl('portrait20x30') }}"
+        data-src="{{ image.getUrl('portrait600x900') }}"
+        data-srcset="{{ image.getUrl('portrait100x150') }} 100w,
+        {{ image.getUrl('portrait200x300') }} 200w,
+        {{ image.getUrl('portrait400x600') }} 400w,
+        {{ image.getUrl('portrait600x900') }} 600w,
+        {{ image.getUrl('portrait800x1200') }} 800w"
+        class="lazyload lazyloading" alt="{{ image.title }}" />
+{% endmacro %}
+
+{% macro lazyImageZoom(image) %}
+    <img
+        src="{{ image.getUrl('w60') }}"
+        data-src="{{ image.getUrl('w600') }}"
+        data-srcset="{{ image.getUrl('w300') }} 300w,
+        {{ image.getUrl('w600') }} 600w,
+        {{ image.getUrl('w900') }} 900w"
+        data-zoomable
+        data-zoom-src="{{ image.getUrl('w1800') }}"
+        class="lazyload lazyloading" alt="{{ image.title }}" />
+{% endmacro %}

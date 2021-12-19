@@ -1,0 +1,9 @@
+baseUrl: '@web/en/'
+enabled: true
+handle: english
+hasUrls: true
+language: en
+name: English
+primary: false
+siteGroup: 70c4632f-a33d-4760-8dcc-522db883edc3 # Craft 3
+sortOrder: 2

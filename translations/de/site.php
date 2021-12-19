@@ -1,0 +1,11 @@
+<?php
+
+return array(
+	'Patient Body' => 'Zuweisungen nehmen wir ab sofort gerne entgegen. Schreiben Sie uns bitte eine Mail oder rufen Sie uns an.',
+	'Form Body' => 'Wir freuen uns über ihr Interesse und nehmen Terminanfragen gerne über das Kontaktformular oder telefonisch entgegen.',
+	'Main Body' => 'Sweet skin ist Ihre innovationsgetriebene Praxis für Dermatologie, Dermatochirurgie, ästhetische Medizin und Langlebigkeitsmedizin mit umfassendem Angebot auf höchstem Qualitätsniveau. Unter der Leitung von Dr. Valentina Bänninger wird im modernsten Hautcampus der Schweiz das gesamte Spektrum der modernen Dermatologie angeboten.',
+	'Dermatology Body' => 'Es gibt kaum Jemand, der keine Hautprobleme kennt. Vom Kleinkind bis zum älteren Menschen sind wir mehr oder weniger anfällig für verschiedene Krankheiten an unserem grössten und sichtbarsten Organ, der Haut. Wir sind als Spezialisten dafür da, sie in jeder Lebensphase auf dem Weg zu einer gesunden Haut zu begleiten.', 
+	'Surgical Dermatology Body' => 'Die Dermatochirurgie ist einer der Schwerpunkte bei sweet skin. Wir verfügen mit einem zertifizierten Operationssaal über höchste Standards hinsichtlich Hygiene, Infrastruktur und Expertise. Unsere Ärztinnen und Ärzte verfügen über langjährige Erfahrung, eine hervorragende Ausbildung und einen ausgeprägten Sinn für natürliche Ästhetik.',
+	'Aesthetic Body' => 'Das sweet skin-Team verfügt über langjährige Erfahrung und Expertise im Bereich medizinischer Ästhetik sowie unter anderem über ein hochmodernes, auf künstlicher Intelligenz basierendes Gesichts Analyse- Tool, das neben klassischen Kameras und Methoden ergänzend zur Standortbestimmung sowie auch zur Verlaufsbeurteilung konsultiert werden kann. Wir arbeiten nach dem Motto «Weniger ist mehr» und machen nur, was nachweislich wirkt.',
+	'Skin Body' => 'sweet skin sieht sich als Partnerin ihrer Kundinnen und Kunden in Sachen gesunder Haut, Schönheit und Langlebigkeit. Die Haut ist die zentrale Schnittstelle zum dynamischen Gebiet der Langlebigkeitsmedizin. Auf Basis von neusten wissenschaftlichen Methoden wird es heute möglich, gezielte Behandlungsprogramme für jede einzelne Kundin zu definieren und sowohl das biologische Hautalter als auch unser biologisches Alter insgesamt nachhaltig positiv zu beeinflussen.',
+);

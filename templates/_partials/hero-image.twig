@@ -1,0 +1,16 @@
+<section id="{{ id }}" class="overlap-parent" style="{{style}}">
+    <img src="{{poster}}" class="w-screen overlap-child" alt="">
+    <video class="overlap-child" loop muted playsinline poster="{{poster}}" id="bgvid">
+        <source src="{{ video }}" type="video/mp4">
+    </video>
+    <div class="z-10 flex flex-col justify-between w-full p-5 pt-0 text-white md:flex-row overlap-child">
+        <h1 class="text-huge">one </br>to </br> one</h1>
+        <div>
+            {% if craft.app.language == 'de' %}
+                <h4 class="text-right cursor-pointer text-huge modal-open-form" >termin </br>buchen</h3>
+            {% else %}
+                <h4 class="text-right cursor-pointer text-huge modal-open-form" >book </br>with</br>jackie</h3>
+            {% endif %}
+        </div>
+    </div>
+</section>

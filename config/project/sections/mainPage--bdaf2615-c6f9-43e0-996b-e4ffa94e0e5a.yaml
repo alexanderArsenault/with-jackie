@@ -1,0 +1,17 @@
+defaultPlacement: end
+enableVersioning: true
+handle: mainPage
+name: 'Main Page'
+propagationMethod: all
+siteSettings:
+  4f58a483-a0ce-418c-b815-2b4cbfc2844e: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  dc2a2269-f434-4973-af9f-1342311544c2: # Sweet Skin - DE
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+type: single

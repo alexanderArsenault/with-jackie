@@ -1,0 +1,64 @@
+dateModified: 1639415808
+email:
+  fromEmail: rsenaultc@gmail.com
+  fromName: 'Charles Arsenault'
+  replyToEmail: rsenaultc@gmail.com
+  template: null
+  transportSettings:
+    encryptionMethod: ''
+    host: $MAIL_SYSTEM_HOST
+    password: $MAIL_SYSTEM_SENDERPW
+    port: $MAIL_SYSTEM_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $MAIL_SYSTEM_USER
+  transportType: craft\mail\transportadapters\Smtp
+meta:
+  __names__:
+    01b83e13-f14a-4b2b-b167-1ce0f0cf4a9e: 'Main Page' # Main Page
+    4f58a483-a0ce-418c-b815-2b4cbfc2844e: English # English
+    5c94fcc8-5c73-41e4-b333-ff73d8c0c418: Common # Common
+    70c4632f-a33d-4760-8dcc-522db883edc3: 'Craft 3' # Craft 3
+    bdaf2615-c6f9-43e0-996b-e4ffa94e0e5a: 'Main Page' # Main Page
+    dc2a2269-f434-4973-af9f-1342311544c2: 'Sweet Skin - DE' # Sweet Skin - DE
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'Signup form'
+      prependSubject: ''
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: rsenaultc@gmail.com
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      honeypotParam: body
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  scss:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft 3'
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

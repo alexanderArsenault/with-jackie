@@ -1,0 +1,87 @@
+<div id="full-form" class="fixed top-0 left-0 z-20 flex items-center justify-center w-full h-full opacity-0 pointer-events-none modal form-modal">
+  <div class="absolute w-full h-full modal-overlay-form"></div>
+  
+  {# Modal Background #}
+  <div class="z-50 w-11/12 h-auto mx-auto overflow-y-auto transition-all bg-white border border-black shadow-lg rounded-2xl modal-container md:max-w-md">
+
+  <div class="relative px-6 py-4 text-left modal-content">
+    {# Top Message #}
+    <div class="mb-8">
+      <p class="pb-4 text">{{"Form Body"|t}}</p>
+      <a href="tel:+41415117011" class="mt-3 modal-button">+41 41 511 70 11</a>
+    </div>
+
+    {# Vue Parent Element #}
+    {# Submission Form #}
+      {# When vuejs submission Loading, disable inputs and buttons #}
+    {# Success Message #}
+      {# Show when successful with fadeOut + fadeIn #}
+
+      {# TODO #}
+    {% set message = message ?? null %}
+
+    <form method="post" action="https://formsubmit.co/e41dc50a22229549dc69a607c30f7760" enctype="multipart/form-data" id="kontakt-form" class="js-contact-form">
+    
+        {{ csrfInput() }}
+        {{ actionInput('contact-form/send') }}
+        <div class="flex flex-col">
+          <div id="form-body" class="mb-8">
+            <p class="mb-4 uppercase text-header">{{"Kontaktformular"|t}}</p>
+            <div class="flex flex-col">
+              <div class="flex mb-2">
+                <input id="body" name="body" type="text">
+                
+                {{ input('text', 'fromName', message.fromName ?? '', {
+                    class: 'w-4/12 modal-input mr-1',
+                    id: 'from-first',
+                    required: true,
+                    placeholder: "Vorname"|t,
+                    autocomplete: 'given-name',
+                }) }}
+                {{ message ? _self.errorList(message.getErrors('fromName')) }}
+                
+                {{ input('text', 'message[LastName]', '', {
+                    class: 'w-8/12 modal-input',
+                    id: 'from-last',
+                    placeholder: "Nachname"|t,
+                    autocomplete: 'family-name',
+                }) }}
+
+              </div>
+              <div class="flex mb-2">
+                
+                {{ input('text', 'message[CountryCode]', '+41', {
+                    class: 'w-3/12 md:w-2/12 modal-input mr-1',
+                    id: 'from-tel-countrycode',
+                    placeholder: "+41",
+                    autocomplete: 'tel-country-code',
+                }) }}
+
+                {{ input('text', 'message[Phone]', '',   {
+                    class: 'w-9/12 md:w-10/12 modal-input',
+                    id: 'from-tel-number',
+                    placeholder: "Mobilnr"|t,
+                    autocomplete: 'tel-national',
+                }) }}
+              </div>
+              {{ input('email', 'fromEmail', message.fromEmail ?? '', {
+                  id: 'from-email',
+                  autocomplete: 'email',
+                  placeholder:'E-mail',
+                  class:"w-full modal-input"
+              }) }}
+              {{ message ? _self.errorList(message.getErrors('fromEmail')) }}
+            </div>
+            <p class="mt-8 mb-4 text-header">{{"Wunschtermin / Anliegen"|t}}</p>
+            <textarea class="resize-none modal-textarea" name="message[body]" id="message" cols="10">{{ message.message.body ?? '' }}</textarea>
+          </div>
+          <div class="flex items-center justify-end">
+            <span id="failed" class="hidden pr-5 text-xs text-red-600">{{"Bitte versuchen Sie es erneut."|t}}</span>
+            <button disabled class="self-end js-contact-form-send modal-button">{{"Senden"|t}}</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

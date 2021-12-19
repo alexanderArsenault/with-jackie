@@ -1,0 +1,70 @@
+{% extends "_layouts/default" %}
+{% block content %}
+	<main class="relative overflow-x-hidden" >
+			{{ include('_partials/hero-image.twig', {
+					id: 'header-one',
+					style: '',
+					video: '/assets/images/videos/MANUELA_04.mp4',
+					poster: '/assets/images/videos/ManuelaFourFrame.jpg',
+			})}}
+
+			<section class="p-5 pb-0 leading-none">
+				{% include "_partials/language-switcher.twig" %}
+			</section>
+			<section class="px-5 py-12 pt-20 md:flex md:justify-end">
+					<p class="text md:w-1/2">{{"Main Body"|t}}</p>
+			</section>
+			
+			<section id="services" class="flex flex-col px-5 py-12">
+					<h2 id="derma" class="self-start pb-2 cursor-pointer text-lightgrey active text-large">{{"Dermatologie"|t}}</h2>
+					<h2 id="chiru" class="self-start pb-2 cursor-pointer text-lightgrey text-large">{{"Chirurgische Dermatologie"|t}}</h2>
+					<h2 id="medizin" class="self-start pb-2 cursor-pointer text-lightgrey text-large">{{"Ästhetische Medizin"|t}}</h2>
+					<h2 id="haut" class="self-start pb-2 cursor-pointer text-lightgrey text-large">{{"Haut und Langlebigkeit"|t}}</h2>
+					<div id="service-text" class="h-auto pt-16 transition duration-500 ease-in-out md:flex md:justify-end service-text">
+							<p id="display-text" class="md:w-1/2 text">{{"Dermatology Body"|t}}</p>
+							<p class="hidden derma">{{"Dermatology Body"|t}}</p>
+							<p class="hidden chiru">{{"Surgical Dermatology Body"|t}}</p>
+							<p class="hidden medizin">{{'Aesthetic Body'|t}}</p>
+							<p class="hidden haut">{{'Skin Body'|t}}</p>
+					</div>
+			</section>
+
+			{# Middle Section #}
+			<section class="w-full md:flex">
+					<div class="md:w-1/2">
+							<img id="cta" class="w-full" src="/assets/images/images/SWEET_SKIN_NOEMY_0259.jpg" alt="">
+					</div>
+					<div class="flex flex-col justify-center px-6 text-center md:w-1/2 py-14">
+					{% if craft.app.language == 'de' %}
+						<h2 class="pb-8 text-large">Ab 1. Februar 2022 </br>in Baar für Sie da.</h2>
+					{% else %}
+						<h2 class="pb-8 text-large">We are available for you in Baar </br> as of February 1, 2022.</h2>
+					{% endif %}
+							<button class="self-center mb-2 cursor-pointer modal-button modal-open-form">{{"Termin buchen"|t}}</button>
+							<button class="self-center rounded-full cursor-pointer modal-button modal-open-patient">{{"Patientinnen zuweisen"|t}}</button>
+					</div>
+			</section>
+
+			<section class="px-5 py-12 pb-20 md:pt-20">
+					<h3 class="mb-6 text-huge md:mb-10">Next generation </br>dermatology.</h3>
+					
+					<div class="flex justify-between md:justify-start">
+							<p class="md:pr-10 text">sweet skin</br>
+							Grabenstrasse 2</br>
+							6340 Baar</p>
+							<p class="self-end text md:self-baseline"><a href="tel:+41415117011">+41 41 511 70 11</a></br>
+							<a href="mailto:info@sweet.skin">info@sweet.skin</a></p>
+					</div>
+			</section>
+
+			{{ include('_partials/hero-image.twig', {
+					id: 'header-two',
+					style: 'min-height: 100vh',
+					video: '/assets/images/videos/Noemy_01.mp4',
+					poster: '/assets/images/videos/NoemiOneFrame.jpg',
+			})}}
+			
+			<div id="success" class="" > {{"Vielen Dank! Ihre Nachricht wurde gesendet."|t}}</div>
+	</main>
+
+{% endblock %}
